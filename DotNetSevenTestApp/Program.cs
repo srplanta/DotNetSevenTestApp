@@ -1,7 +1,11 @@
+using DotNetSevenTestApp.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//REGISTER DBCONTEXT CLASS
+builder.Services.AddDbContext<StudentDbContext>();
 
 var app = builder.Build();
 

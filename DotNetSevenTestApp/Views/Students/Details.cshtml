@@ -1,0 +1,54 @@
+﻿@model DotNetSevenTestApp.Models.StudentDbModel.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-4">
+        <h1>Student Details</h1>
+    </div>
+    @*<div class="col-2 text-end">
+        <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+    </div>*@
+</div>
+<hr />
+<br />
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Standard)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Standard)
+        </dd>
+    </dl>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <a asp-action="Edit" asp-route-id="@Model?.StdId" class="btn btn-outline-primary">Edit</a>
+    </div>
+    <div class="col-2">
+        <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+    </div>
+</div>
